@@ -1,0 +1,86 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cards__list,
+.rating__list,
+.cards__buttons {
+  @include reset-list;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-top: 29px;
+}
+
+.cards__item {
+  width: 220px;
+  min-height: 304px;
+  padding: 14px 13px 20px 13px;
+  border: 1px solid $line-color;
+}
+
+.cards__img {
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+.cards__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 13px;
+}
+
+.cards__button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: -3px;
+  padding: 4px 9px 4px 9px;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  color: $global-background-color;
+  background-color: $checkbox-active-color;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &--orange {
+    margin-bottom: -1px;
+    padding: 4px 12px 4px 11px;
+    background-color: $orange-btn-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $checkbox-hover-color;
+  }
+
+  &:active {
+    background-color: $checkbox-color;
+  }
+
+  &--orange:hover,
+  &--orange:focus {
+    background-color: $orange-hover-color;
+  }
+
+  &--orange:active {
+    background-color: $orange-active-color;
+  }
+}
+
+.cards__button svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -1px;
+  margin-right: 8px;
+}

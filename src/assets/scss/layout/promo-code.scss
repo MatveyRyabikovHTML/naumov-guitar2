@@ -1,0 +1,77 @@
+.promo-code,
+.promo-code__title,
+.promo-code__description {
+  @include reset-text;
+}
+
+.promo-code {
+  margin-top: 38px;
+  border: none;
+}
+
+.promo-code__title {
+  @include base-font($bold);
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+}
+
+.promo-code__description {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.074em;
+}
+
+.promo-code__wrapper {
+  position: relative;
+  margin-top: 19px;
+  margin-bottom: 20px;
+
+  &--error:after {
+    content: "Промокод не действителен";
+    position: absolute;
+    bottom: -20px;
+    left: -5px;
+    width: 180px;
+    height: 19px;
+    font-size: 14px;
+    color: red;
+  }
+}
+
+.promo-code__input {
+  width: 170px;
+  height: 36px;
+  margin-right: 33px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  border: 2px solid $line-color;
+  border-radius: 2px;
+}
+
+.promo-code__button {
+  padding: 11px 15px 10px 22px;
+  line-height: 15px;
+  letter-spacing: 0.12em;
+  color: $global-background-color;
+  background-color: $checkbox-active-color;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: $checkbox-hover-color;
+  }
+
+  &:not(:disabled):active {
+    background-color: $checkbox-color;
+  }
+}

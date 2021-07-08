@@ -1,0 +1,31 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.details__title,
+.details__price {
+  @include reset-text;
+  @include base-font();
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+}
+
+.details__title {
+  max-width: 102px;
+  margin-right: 2px;
+  text-align: left;
+}
+
+.details__price {
+  max-width: 93px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.details__price span {
+  margin-left: 4px;
+}

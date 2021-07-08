@@ -1,0 +1,200 @@
+.basket__list {
+  @include reset-list;
+  padding-top: 25px;
+}
+
+.basket__item {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 24px;
+  margin-bottom: 17px;
+
+  &:first-child::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 0.7px;
+    background-color: $line-color;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 0.7px;
+    background-color: $line-color;
+  }
+}
+
+.basket__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin-top: -2px;
+  margin-left: 69px;
+}
+
+.basket__title,
+.basket__description,
+.basket__price,
+.basket__fieldset {
+  @include reset-text;
+}
+
+.basket__fieldset {
+  display: flex;
+  width: 109px;
+  margin-top: 18px;
+  margin-left: 87px;
+  border: none;
+}
+
+.basket__img {
+  margin-top: -2px;
+  margin-left: 20px;
+}
+
+.basket__title {
+  @include base-font($bold);
+  width: 260px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+}
+
+.basket__description {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+}
+
+.basket__price {
+  align-self: center;
+  width: 120px;
+  margin-left: 61px;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-align: end;
+
+  &--total {
+    @include base-font($bold);
+    width: 142px;
+    margin-left: 4px;
+    margin-right: -4px;
+    text-align: right;
+  }
+
+  &--submit-total {
+    @include base-font($bold);
+    width: auto;
+    margin-right: -49px;
+    margin-left: 0;
+    letter-spacing: 0.06em;
+  }
+}
+
+.basket__button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  width: 28px;
+  height: 30px;
+  color: $checkbox-color;
+  border: 1px solid $checkbox-color;
+  text-align: center;
+  cursor: pointer;
+
+  &--delete {
+    position: absolute;
+    top: 18px;
+    left: -4px;
+    border: none;
+  }
+
+  &:not(&--delete):hover,
+  &:not(&--delete):focus {
+    color: $global-background-color;
+    background-color: $checkbox-hover-color;
+    border-color: $checkbox-hover-color;
+  }
+
+  &:not(&--delete):active {
+    color: $global-background-color;
+    background-color: $checkbox-color;
+    border-color: $checkbox-color;
+  }
+
+  &--delete:hover svg,
+  &--delete:focus svg {
+    transform: scale(1.2);
+  }
+
+  &--delete:active svg {
+    transform: scale(0.8);
+  }
+}
+
+.basket__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  height: 30px;
+  padding-top: 2px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: $checkbox-color;
+  border-top: 1px solid $checkbox-color;
+  border-bottom: 1px solid $checkbox-color;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  appearance: none;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.basket__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__submit-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+}
+
+.basket__button-submit {
+  margin-top: 44px;
+  padding: 10px 33px 11px 33px;
+  line-height: 15px;
+  letter-spacing: 0.14em;
+  color: $global-background-color;
+  background-color: $orange-btn-color;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-hover-color;
+  }
+
+  &:active {
+    background-color: $orange-active-color;
+  }
+}

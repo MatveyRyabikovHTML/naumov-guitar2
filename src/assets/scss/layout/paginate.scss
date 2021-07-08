@@ -1,0 +1,75 @@
+.paginate {
+  @include reset-list;
+  display: flex;
+  align-self: flex-end;
+  margin-top: 30px;
+}
+
+
+.paginate__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  padding-top: 2px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: $global-text-color;
+  border: 0.7px solid $checkbox-color;
+  border-radius: 2px;
+
+  &--back,
+  &--onward {
+    width: 80px;
+  }
+
+  &--back {
+    margin-right: 14px;
+  }
+
+  &--more {
+    @include other-font();
+    appearance: none;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &--onward {
+    margin-left: 4px;
+    margin-right: 0;
+  }
+
+  &--active {
+    color: $global-background-color;
+    background-color: $checkbox-hover-color;
+    cursor: default;
+  }
+
+  &--disabled {
+    color: $checkbox-disabled-color;
+    border-color: $checkbox-disabled-color;
+    cursor: default;
+  }
+
+  &:not(&--active):not(&--disabled):hover,
+  &:not(&--active):not(&--disabled):focus {
+    color: $global-background-color;
+    background-color: $checkbox-hover-color;
+    border-color: $checkbox-hover-color;
+  }
+
+  &:not(&--active):not(&--disabled):active {
+    color: $global-background-color;
+    background-color: $checkbox-color;
+    border-color: $checkbox-color;
+  }
+}

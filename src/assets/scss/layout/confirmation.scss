@@ -1,0 +1,46 @@
+.confirmation {
+  display: flex;
+  justify-content: space-between;
+  padding: 41px 82px 22px 82px;
+}
+
+.confirmation__button {
+  @include base-font($bold);
+  padding: 13px 22px 16px 22px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  color: $global-background-color;
+  background-color: $orange-btn-color;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &--next {
+    padding: 13px 9px 16px 11px;
+    color: $checkbox-hover-color;
+    background-color: transparent;
+    border: 1px solid $checkbox-hover-color;
+  }
+
+  &--basket:hover,
+  &--basket:focus {
+    background-color: $orange-hover-color;
+  }
+
+  &--basket:active {
+    background-color: $orange-active-color;
+  }
+
+  &--next:hover,
+  &--next:focus {
+    color: $global-background-color;
+    background-color: $checkbox-hover-color;
+    border-color: $checkbox-hover-color;
+  }
+
+  &--next:active {
+    color: $global-background-color;
+    background-color: $checkbox-color;
+    border-color: $checkbox-color;
+  }
+}

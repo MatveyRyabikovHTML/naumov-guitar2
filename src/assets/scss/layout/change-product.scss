@@ -1,0 +1,90 @@
+.change-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+.change-product__details-wrapper {
+  margin-left: -72px;
+}
+
+.change-product__name,
+.change-product__description,
+.change-product__price {
+  @include reset-text;
+}
+
+.change-product__name {
+  @include base-font($bold);
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+}
+
+.change-product__description {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+}
+
+.change-product__price {
+  @include base-font($bold);
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+}
+
+.change-product__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-product__button {
+  @include base-font($bold);
+  margin-top: 14px;
+  padding: 15px 17px 16px 18px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  color: $global-background-color;
+  background-color: $orange-btn-color;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &--next {
+    margin-top: 16px;
+    padding: 13px 9px 16px 11px;
+    color: $checkbox-hover-color;
+    background-color: transparent;
+    border: 1px solid $checkbox-hover-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $orange-hover-color;
+  }
+
+  &:active {
+    background-color: $orange-active-color;
+  }
+
+  &--next:hover,
+  &--next:focus {
+    color: $global-background-color;
+    background-color: $checkbox-hover-color;
+    border-color: $checkbox-hover-color;
+  }
+
+  &--next:active {
+    color: $global-background-color;
+    background-color: $checkbox-color;
+    border-color: $checkbox-color;
+  }
+}
+

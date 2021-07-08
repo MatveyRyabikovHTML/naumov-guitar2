@@ -1,0 +1,23 @@
+.rating,
+.rating__list {
+  display: flex;
+}
+
+.rating {
+  align-self: flex-start;
+  margin-bottom: 3px;
+}
+
+.rating__item {
+  margin-right: 4px;
+}
+
+.rating__counter {
+  @include other-font();
+  align-self: center;
+  margin-left: 2px;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: $checkbox-color;
+}

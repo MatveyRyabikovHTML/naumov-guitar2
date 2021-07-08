@@ -1,0 +1,30 @@
+@import "./base/normalize.scss";
+@import "./base/fonts.scss";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/global.scss";
+
+@import "./layout/error.scss";
+@import "./layout/page-container.scss";
+@import "./layout/container.scss";
+
+@import "./layout/header.scss";
+@import "./layout/main-nav.scss";
+
+@import "./layout/modal.scss";
+@import "layout/change-product.scss";
+@import "./layout/confirmation.scss";
+
+@import "./layout/main.scss";
+@import "./layout/breadcrumb.scss";
+@import "./layout/filter.scss";
+@import "./layout/cards.scss";
+@import "./layout/sort.scss";
+@import "./layout/rating.scss";
+@import "./layout/details.scss";
+@import "./layout/paginate.scss";
+
+@import "./layout/basket.scss";
+@import "./layout/promo-code.scss";
+
+@import "./layout/footer.scss";

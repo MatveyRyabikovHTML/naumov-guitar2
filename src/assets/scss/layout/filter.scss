@@ -1,0 +1,135 @@
+.filter {
+  width: 210px;
+  margin-right: 30px;
+}
+
+.filter__title,
+.filter__legend {
+  @include reset-text;
+  @include base-font($bold);
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+}
+
+.filter__fieldset {
+  @include reset-text;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 24px;
+  border: none;
+
+  &:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:last-child {
+    margin-top: 65px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -54px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 0.7px;
+    background-color: $line-color;
+  }
+}
+
+.filter__legend span {
+  @include other-font($bold);
+  font-size: 0.8em;
+  margin-left: -2px;
+}
+
+.filter__input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    position: absolute;
+    top: 13px;
+    left: 97px;
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: #585757;
+  }
+}
+
+.filter__input {
+  width: 84px;
+  height: 28px;
+  font-size: 14px;
+  line-height: 10px;
+  letter-spacing: 0.05em;
+  border: 0.7px solid $checkbox-color;
+  border-radius: 2px;
+  text-align: center;
+  appearance: none;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.filter__label {
+  position: relative;
+  margin-left: 40px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}
+
+.filter__checkbox[type="checkbox"] + .filter__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 24px;
+  height: 24px;
+  border: 0.7px solid $checkbox-color;
+  border-radius: 2px;
+}
+
+.filter__checkbox[type="checkbox"]:checked + .filter__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -34px;
+  width: 14px;
+  height: 14px;
+  background: no-repeat url("../../img/svg/icon-check.svg");
+}
+
+.filter__checkbox[type="checkbox"]:hover + .filter__label::before,
+.filter__checkbox[type="checkbox"]:focus + .filter__label::before, {
+  border-color: $checkbox-hover-color;
+}
+
+.filter__checkbox[type="checkbox"]:active + .filter__label::before{
+  border-color: $checkbox-active-color;
+}
+
+.filter__checkbox[type="checkbox"]:disabled + .filter__label::before{
+  background-color: $checkbox-disabled-fill-color;
+  border-color: $checkbox-disabled-color;
+}
+
+.filter__checkbox[type="checkbox"]:disabled + .filter__label {
+  color: $checkbox-disabled-color;
+  cursor: default;
+}

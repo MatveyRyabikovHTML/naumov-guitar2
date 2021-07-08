@@ -1,0 +1,51 @@
+.sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort__title,
+.sort__button {
+  margin-right: 19px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+}
+
+.sort__button {
+  @include reset-text;
+  margin-right: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    color: $checkbox-hover-color;
+    cursor: default;
+  }
+
+  &--up {
+    margin-right: 22px;
+  }
+
+  &--down {
+    margin-right: 12px;
+    transform: rotate(180deg);
+  }
+
+  &:not(&:disabled):hover,
+  &:not(&:disabled):focus {
+    color: $link-hover-color;
+  }
+
+  &:not(&:disabled):active {
+    color: $link-active-color;
+  }
+}
+
+.sort__svg {
+  pointer-events: none;
+}
+
+.sort__button--up.sort__button--active,
+.sort__button--down.sort__button--active {
+  color: $sort-btn-active-color;
+}

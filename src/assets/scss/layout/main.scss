@@ -1,0 +1,28 @@
+.main {
+  position: relative;
+  width: 100%;
+  margin-top: 214px;
+  margin-bottom: 138px;
+  flex: 1 0 auto;
+
+  &--basket {
+    margin-top: 238px;
+    margin-bottom: 150px;
+  }
+}
+
+.main__title {
+  @include reset-text;
+  @include base-font($bold);
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+
+.main__content-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 620px;
+  margin-top: 48px;
+}

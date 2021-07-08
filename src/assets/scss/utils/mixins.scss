@@ -1,0 +1,24 @@
+@mixin base-font($weight: $regular) {
+  font-family: "droid-sans", "Arial", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin other-font($weight: $regular) {
+  font-family: "poppins", "Arial", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin reset-list {
+  list-style: none;
+  @include reset-text
+}
+
+@mixin reset-text {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin base-flex {
+  display: flex;
+  flex-wrap: wrap;
+}

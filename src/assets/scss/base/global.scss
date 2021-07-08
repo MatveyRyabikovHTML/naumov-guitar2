@@ -1,0 +1,36 @@
+html,
+body {
+  @include reset-text;
+  @include base-font;
+  font-size: 16px;
+  line-height: 18px;
+  min-width: 320px;
+  background-color: $global-background-color;
+  color: black;
+  overflow-x: hidden;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
